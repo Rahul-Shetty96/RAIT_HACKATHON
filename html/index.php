@@ -12,7 +12,99 @@
     <!--fonts-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+
+	<style>
+		
+{box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+#mah
+{
+width:100%; height:500px ; background-color : blue;
+}
+	</style>
+
+	<script type="text/javascript">
+
+		   $(function() {
+		        $(window).scroll(function() {
+		            if($(window).scrollTop() > $(".search").offset().top-400){
+		            		$(".my").show('slow');
+		            }else{
+		                $(".my").hide();
+		            }
+		        });
+		    });
+	
+
+	</script>
     
 
 </head>
@@ -31,7 +123,7 @@
 				<div class="col-sm-4" id="one" >
                     <div class="col-lg-12" id="one1">
 
-                        <a class="a" href="registerpatient.php"><p> Sign up/Sign in for Patient</p></a>
+                        <a class="a" href="#"><p> Search the doctor</p></a>
                         <p> </p>
                      </div>
 
@@ -47,7 +139,7 @@
 
                 <div class="col-sm-4" class="two" >
                     <div class="col-lg-12" id="two1">
-                         <a class="a" href="registerdoctor.php"><p>Sign up/Sign in for Doctor</p></a>
+                         <a class="a" href="#"><p> Search the doctor</p></a>
                     </div>
 
                      <div class="col-lg-12" id="two2">
@@ -79,7 +171,6 @@
 					    <input type="text" class="form-control" placeholder="Search by Specialist" aria-describedby="basic-addon1">
 				    </div>
 				</div>
-
 				<div class="col-md-3 col-md-offset-1">
 				    <div class="input-group>
 					    <span class="glyphicon glyphicon-search"></span>
@@ -96,9 +187,9 @@
 	<div class="map container"></div><!-- p3 -->
 
 
-	<div class="services container">
+	<div class="services container my">
 
-		<div class="row services-row-1">
+		<div class="row services-row-1 l1">
 			<div class="col-md-4 ser">
 				<div class="service1">
 					
@@ -128,7 +219,7 @@
 			</div>
 		</div>
 
-		<div class="row services-row-2">
+		<div class="row services-row-2 l4">
 			<div class="col-md-4 ser">
 				<div class="service4">
 					
@@ -165,36 +256,65 @@
 		
 
 	</div><!-- p4 -->
+<h2>Automatic Slideshow</h2>
+<p>Change image every 2 seconds:</p>
 
-	<div class="post-box container">
-		
-		<div class="row postit">
-				
-				<div class="col-md-4 post">
-					<div class="post1">
-						
-					</div>
-				</div>
-				
-				<div class="col-md-4 post">
-					<div class="post2">
-						
-					</div>
-				</div>
-				
-				<div class="col-md-4 post">
-					<div class="post3">
-						
-					</div>
-				</div>
-		
-		</div>
+<div class="slideshow-container">
 
-	</div><!--p5-->
+<div class="mySlides fade" >
+  <div class="numbertext" ></div>
+  <div id = "mah"></div>
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+ <div id = "mah"></div>
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <div id = "mah"></div>
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
     
 
     <div class="row footer">
     	Copyright
     </div>
+<script>
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+  
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
 </body>
 </html>
