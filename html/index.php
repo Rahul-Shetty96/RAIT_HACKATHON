@@ -31,7 +31,7 @@
 				<div class="col-sm-4" id="one" >
                     <div class="col-lg-12" id="one1">
 
-                        <a class="a" href="#"><p> Search the doctor</p></a>
+                        <a class="a" href="registerpatient.php"><p> Sign up/Sign in for Patient</p></a>
                         <p> </p>
                      </div>
 
@@ -47,7 +47,7 @@
 
                 <div class="col-sm-4" class="two" >
                     <div class="col-lg-12" id="two1">
-                         <a class="a" href="#"><p> Search the doctor</p></a>
+                         <a class="a" href="registerdoctor.php"><p>Sign up/Sign in for Doctor</p></a>
                     </div>
 
                      <div class="col-lg-12" id="two2">
